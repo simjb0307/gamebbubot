@@ -891,7 +891,7 @@ class taskCog(commands.Cog):
 		if ctx.message.channel.id != basicSetting[7]:
 			return
 
-		for t in asyncio.Task.all_tasks():
+		for t in asyncio.all_tasks():
 			# print(t._coro.__name__)
 			if t._coro.__name__ == f"boss_check":
 				if t.done():
